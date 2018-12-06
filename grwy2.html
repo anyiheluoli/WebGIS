@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web GIS</title>
+    <style type="text/css"> *{margin:0;padding:0;}
+        h1{color:blue;font-style: 隶书 font-size:7;text-align: center; }
+        h2{color: yellow;font-size: 6;text-align: center;}
+        p{color: yellow;font-size: 6;text-align: center;}
+        li{list-style:none;}
+        a{text-decoration: none;}
+        body{
+            min-width: 1365px;
+            min-height: 600px;
+            position: relative;
+        }
+        #left-content{
+            width: 280px;
+            height: 630px;
+            background-color:pink;
+        }
+        #left-content div{
+            position: absolute;
+            top: 108px;
+            left: 60px;
+            width: 160px;
+            height: 160px;
+            border-radius: 160px;
+            background-color: #4dabf6;
+        }
+        #left-content div .logo{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 140px;
+            height: 140px;
+            border-radius: 140px;
+            background: url("1.jpg") no-repeat;
+            background-size: 140px 140px;
+        }
+        #left-content ul{
+            position: absolute;
+            top: 260px;
+            left: 95px;
+        }
+        #left-content ul li{
+            cursor: pointer;
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1em;
+            color: #fff;
+        }
+        #left-content ul li:hover{
+            color: red;
+        }
+        #left-content ul li .profile{
+            display: none;
+            position: absolute;
+            top: -260px;
+            left: 175px;
+            width: 1095px;
+            height: 630px;
+            border-radius: 0;
+            background: url('5.jpg') no-repeat;
+            background-size: 1095px 630px;
+        }
+        #left-content ul li .profile li{
+            text-indent: 2em;
+            margin-top:20px;
+            font-size: 16px;
+            color: #000;
+            letter-spacing: 0;
+        }
+        #left-content ul li:nth-child(1):hover .profile{
+            display: block;
+            z-index: 10;
+        }
+        #left-content ul li .exe{
+            display: none;
+            position: absolute;
+            top: -260px;
+            left: 175px;
+            width: 1095px;
+            height: 630px;
+            border-radius: 0;
+            background: url('樱桃沟一.jpg') no-repeat;
+            background-size: 1095px 630px;
+        }
+        #left-content ul li .exe p{
+            margin-top: 20px;
+            text-indent: 2em;
+            font-size: 18px;
+            letter-spacing: 0;
+            color: #000;
+        }
+        #left-content ul li:nth-child(2):hover .exe{
+            display: block;
+            z-index: 10;
+        }
+        #left-content ul li .skills{
+            display: none;
+            position: absolute;
+            top: -260px;
+            left: 175px;
+            width: 1095px;
+            height: 630px;
+            border-radius: 0;
+            background: url('油菜花.jpg') no-repeat;
+            background-size: 1095px 630px;
+        }
+        #left-content ul li:nth-child(3):hover .skills{
+            display: block;
+            z-index: 10;
+        }
+        #left-content ul li .rewards{
+            display: none;
+            position: absolute;
+            top: -260px;
+            left: 175px;
+            width: 1095px;
+            height: 630px;
+            border-radius: 0;
+            background: url('樱花一.jpg') no-repeat;
+            background-size: 1095px 630px;
+        }
+        #left-content ul li:nth-child(4):hover .rewards{
+            display: block;
+            z-index: 10;
+        }
+        #right-content{
+            position: absolute;
+            top: -20px;
+            left: 270px;
+            width: 1095px;
+            height: 630px;
+        }
+        #right-content .first-bg{
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 1095px;
+            height: 630px;
+            background: url('2.jpg') no-repeat;
+            background-size: 1095px 630px;
+            z-index: 1;
+        }
+        #right-content .first-bg h1{
+            margin-top: 200px;
+            margin-left: 100px;
+            letter-spacing: 10px;
+        } 
+    </style>
+</head>
+<body>
+    <div id="left-content">
+        <div>
+            <div class="logo"></div>
+        </div>
+        <ul>
+            <li title="简介"><button type="button" onclick="click1(this)" title="简介" class="menu-button">简介</button>
+                <div class="profile">
+                      <embed src="E:\DS\webGIS\shiyan\棠梨煎雪.mp3";width="0";height="0";autostart="true";controls="true";loop="loop"></embed>
+                    <ul>
+                        <li style="font-size: 20px;">熊明利</li>
+                        <li>生日：情人节</li>
+                        <li>个人信息：水瓶座/O型</li>
+                        <li>爱好：看书，写诗，画画……</li>
+                        <li>想做的事：去旅行</li>
+                    </ul>
+                </div>
+            </li>
+            <li title="故乡"><button type="button" onclick="click1(this)" title="故乡" class="menu-button">故乡</button>
+                <div class="exe">
+                    <p><u><font face="宋体"color="blue">西乡县</font></u></p>
+                    <p><b><font face="宋体"color="blue">西乡县位于陕西南部，汉中东部，东邻石泉、汉阴，南接镇巴和四川通江，北连洋县，西与城固、南郑接壤。南北宽64.5公里，东西长94.5公里，总面积3240平方公里，其中山区占64.79%，丘陵占28.35%，平川占6.86%。阳安铁路横贯东、西，长约70公里，210、316国道纵横穿越县境。西乡境内的樱桃沟是中国第二大樱桃基地，自古有"秦岭南麓小江南"美誉，被联合国科教文卫组织官员誉为"最适合人类居住的地方之一"。2018年9月25日，获得商务部“2018年电子商务进农村综合示范县”荣誉称号。2018年11月20日，入选第二批国家生态文明建设示范市县初选名单。
+                    </font></b></p>
+                    <p><u><font face="宋体"color="blue">特产</font></u></p>
+                    <p><b><font face="宋体"color="blue">樱桃，茶叶，松花变蛋，牛肉干，凉皮</font></b></p>
+                    <p><u><font face="宋体"color="blue">自然风景</font></u></p>
+                    <p><b><font face="宋体"color="blue">樱桃沟，午子山，太白洞，七星湖，枣园湖，鹿龄寺，骆家坝古镇，米仓山自然区</font></b></p>
+                    <p><u><font face="宋体"color="blue">文化遗址</font></u></p>
+                    <p><b><font face="宋体"color="blue">红岩坝文化遗址，李家村文化遗址，何家湾文化遗址</font></b></p>
+
+                </div>
+
+            </li>
+            <li title="风景"><button type="button" onclick="click1(this)" title="风景" class="menu-button">风景</button> 
+                    <div class="skills">
+                        <h1>个人作品</h1>
+                        <h2>芸苔</h2>
+                        <p>芸苔渐寂桃花灼，<br>
+                           凉寒褪却晚风拂。<br>
+                           黄萼裳裳归何处，<br>
+                           尽落尘土育馥丹。<br>
+                        </p>
+                    </div>
+            </li>
+            <li title="作品"><button type="button" onclick="click1(this)" title="作品" class="menu-button">作品</button>
+                <div class="rewards">
+                <h1>个人作品</h1>
+                <h2>樱花</h2>
+                <p>浅浅花开醉春风，<br>
+                   苦无昔缘赏天工。<br>
+                   层层绮罗模样俏，<br>
+                   迷尽尘世思乡人。<br>
+                </p>
+                <h2>钗头凤</h2>
+                <p>初相见，花间愿。悠悠几度欣心念。<br>
+                   细腰鼓，霓裳舞。鹣鲽羣宿，未语知言。<br>
+                   姻缘薄，情谊淡。几经磨难红颜散。<br>
+                   桃花落，楼阁冷。山盟已逝，夙念难圆。<br>
+                </p>
+                </div>
+            </li>
+            <li title="交大链接"><button type="button"><a href="http://www.cqjtu.edu.cn">交大</a></button></li>
+            <li title="西乡链接"><button type="button"><a href="https://baike.baidu.com/item/%E8%A5%BF%E4%B9%A1%E5%8E%BF/63068?fromtitle=%E8%A5%BF%E4%B9%A1&fromid=774428&fr=aladdin">西乡</a></button></li>
+        </ul>
+    </div>
+    <div id="right-content">
+        <div class="first-bg"><h1></h1></div>
+    </div>
+    <script  type="text/javascript">
+function click1(obj)
+{
+  var piframe=document.getElementById("piframe");
+  var psrc=obj.getAttribute("title");
+  piframe.setAttribute("src",psrc);
+}
+    </script>
+</body>
+</html>
